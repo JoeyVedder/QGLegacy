@@ -59,10 +59,42 @@ p {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:gainsboro;
 }
 
-h2, p {font-display: block;
+h2, p {
+    font-display: block;
     text-align: center;
     overflow: hidden;
     background-color: rgb(0, 0, 0);
     padding: auto;
     margin: auto;
+}
+
+/*slider container*/
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --slider-padding: 5rem;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+display: flex;
+justify-content: center;
+}
+
+.slider {
+display: flex;
+width: calc(100% - 2 * var(--slider-padding)) 100%;
+transform: translatex(-00%);
+}
+
+.slider > img {
+flex: 0 0 25%;
+max-width: 25%;
+aspect-ratio: 16 / 9;
+padding: .25rem;
 }
