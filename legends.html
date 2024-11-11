@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" src="css/legends.css"
+</head>
+<body>
+    <h1>Legends are displayed here.</h1>
+    <p>Top 10 people will get early access to our game!!</p>
+
+    <form id="userActionsForm">
+        <h2>Actions</h2>
+        <label>
+            Instagram Follow (5 points):
+            <input type="checkbox" id="followInstagram">
+        </label><br>
+
+        <label>
+            Donate ($1 = 10 points):
+            <input type="number" id="donationAmount" min="0" step="1">
+        </label><br>
+
+        <label>
+            Join Our Discord Server! (5 points):
+            <input type="checkbox" id="joinDiscord">
+        </label><br>
+
+        <label>
+            Newsletter Sign-Up (5 points):
+            <input type="checkbox" id="signUpNewsletter">
+        </label><br>
+
+        <button type="submit">Update Points</button>
+    </form>
+
+    <h2>Scoreboard</h2>
+    <table id="scoreboard">
+        <tr>
+            <th>Name</th>
+            <th>Points</th>
+        </tr>
+    </table>
+
+    <script src="/js/legends.js"></script>
+</body>
+</html>
