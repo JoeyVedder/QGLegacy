@@ -1,0 +1,274 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    color: #d95b5b;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 0 0 5px #d95b5b, 0 0 10px #d95b5b;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #d95b5b;
+    text-shadow: 0 0 5px #d95b5b, 0 0 10px #d95b5b;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-qgl {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-qgl h2 {
+    color: #d95b5b;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: flicker 1.5s infinite alternate; 
+}
+
+.about-qgl h3 {
+    font-size: 1.5rem;
+    color: #d95b5b;
+    animation: flicker 1.5s infinite alternate; 
+}
+
+.about-qgl p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+section.qilot, 
+section.ghost {
+    display: flex;
+    align-items: flex-start;
+    background-color: #222;
+    border: 2px solid #d95b5b;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+section.qilot img, 
+section.ghost img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 3px solid #d95b5b;
+}
+
+.bio {
+    max-width: 600px;
+}
+
+.bio h3 {
+    color: #d95b5b;
+    margin-top: 0;
+}
+
+.bio p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Flickering effect */
+@keyframes flicker {
+    0% { 
+        opacity: 1; /* Full opacity */
+    }
+    10% { 
+        opacity: 0.3; /* Flicker down to 30% opacity */
+    }
+    20% { 
+        opacity: 1; /* Return to full opacity */
+    }
+    40% { 
+        opacity: 0.7; /* Flicker to 70% opacity */
+    }
+    60% { 
+        opacity: 1; /* Full opacity again */
+    }
+    80% { 
+        opacity: 0.5; /* Flicker to 50% opacity */
+    }
+    100% { 
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+/* Spider Web and Spider Styling Still working on this and its pissing me off */
+#spider-container {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+}
+
+#spider-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #d95b5b;
+    border-radius: 50%;
+    z-index: -1; 
+    transition: all 0.1s ease-in-out;
+}
+
+#spider {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #d95b5b;
+    border-radius: 50%;
+    top: -15px;
+    left: -10px;
+    animation: swing 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes swing {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+/* Positioning the spider web and spider as you scroll */
+#spider-container {
+    position: relative;
+}
+
+#spider-web {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#spider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #d95b5b;
+    border-radius: 50%;
+}
+
+/* Fixed positioning for spider to follow scroll */
+#spider-container.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#spider-web.fixed {
+    position: fixed;
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #d95b5b;
+    border-radius: 50%;
+    z-index: 999;
+    transition: all 0.1s ease-in-out;
+}
+
+#spider.fixed {
+    position: fixed;
+    top: 65px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flicker {
+    animation: flicker 1.5s infinite alternate; 
+}
+
+/* Specific elements with synchronized flicker */
+
+.about-qgl h2, 
+.about-qgl h3 {
+    color: #d95b5b;
+    animation: flicker 1.5s infinite alternate; 
+}
+
+/* "Our Story" text flicker */
+.about-qgl h3 {
+    animation: flicker 1.5s infinite alternate; /* Flicker synced here */
+}
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+    section.qilot, 
+    section.ghost {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adjust image size for smaller screens */
+    section.qilot img, 
+    section.ghost img {
+        width: 100px;
+        height: 100px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
