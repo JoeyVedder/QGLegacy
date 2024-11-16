@@ -1,0 +1,30 @@
+.main-layout {
+    min-height: 100dvh;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr auto;
+
+    border: 3px solid lightcoral; 
+
+}
+
+.header1 {
+    display: grid;
+    place-items: center;
+
+    border: 3px solid blue;
+}
+
+.content1 {
+    display: flex;
+
+
+    border: 3px solid green;
+}
+
+.footer {
+    display: block;
+
+    border: 3px solid blue;
+}
