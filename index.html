@@ -1,4 +1,3 @@
-<!--Make Upcoming Games and other sections like it apart of a navbar/tab list not in a section on thr home page-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,10 @@
         </ul>
     </nav>
     
-    <br />
+    <div class="auth-container">
+        <button id="signInBtn">Sign In</button>
+        <button id="signUpBtn">Sign Up</button>
+    </div>
 
     <h2>The bigger picture
         <p>we are trying to be the next upcoming gaming studio. 
@@ -26,5 +28,35 @@
             <br /> For those of you with lots of money and nothing to to with it, follow the link to donate! <a href="legends.html">Legends</a>
         </p>
     </h2>
+
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Sign In</h3>
+            <form id="signInForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Sign Up</h3>
+            <form id="signUpForm">
+                <label for="newEmail">Email:</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <button type="submit">Sign Up</button> 
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

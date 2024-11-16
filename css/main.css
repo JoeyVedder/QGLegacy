@@ -98,3 +98,88 @@ max-width: 25%;
 aspect-ratio: 16 / 9;
 padding: .25rem;
 }
+
+/* Auth buttons */
+.auth-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-container button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: black;
+    color: gainsboro;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background-color: rgb(43, 29, 29);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: black;
+    color: gainsboro;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    background-color: rgb(30, 30, 30);
+    color: gainsboro;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(43, 29, 29);
+    color: gainsboro;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: rgb(60, 40, 40);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gainsboro;
+    font-size: 20px;
+    cursor: pointer;
+}
+

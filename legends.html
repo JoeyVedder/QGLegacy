@@ -4,55 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard</title>
-    <link rel="stylesheet" src="css/legends.css">
+    <link rel="stylesheet" href="css/legends.css">
 </head>
 <body>
-   
-    <h1>Become a Legend</h1>
-        <h2>About legends</h2>
-            <p>When you create an account, you can start earning points to become<br />
-               the greatest legend of all time. You can find your rank in the leader board<br />
-               below. The top 10 people will get early access to our game!! <br />
-                Donating money helps us spend more time trying to create and perfect<br />
-                our games and other content. We will keep you up to date on all of our<br />
-                now content and events. So join us on our journey and become a legend today.
-            </p>
-
-    <form id="userActionsForm">
-        <h2>Actions</h2>
-        <label>
-            Instagram Follow (5 points):
-            <input type="checkbox" id="followInstagram">
-        </label><br>
-
-        <label>
-            Donate ($1 = 10 points):
-            <input type="number" id="donationAmount" min="0" step="1">
-        </label><br>
-
-        <label>
-            Join Our Discord Server! (5 points):
-            <input type="checkbox" id="joinDiscord">
-        </label><br>
-
-        <label>
-            Newsletter Sign-Up (5 points):
-            <input type="checkbox" id="signUpNewsletter">
-        </label><br>
-
-        <button type="submit">Update Points</button>
-    </form>
-
-    <h2>Scoreboard</h2>
-    <table id="scoreboard">
-        <tr>
-            <th>Name</th>
-            <th>Points</th>
-        </tr>
-    </table>
-
-    <script src="/js/legends.js"></script>
-</body>
-
-<!--ledgends -->
-</html>
+    <nav>
+        <header>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="legends.html" class="active">Legends</a></li>
+            </ul>
+    </nav>
+        </header>
+        <h1>Become a Legend</h1>
+            <h2>About legends</h2>
+                <p>When you create an account, you can start earning points to become<br />
+                   the greatest legend of all time. You can find your rank in the leader board<br />
+                   below. The top 10 people will get early access to our game!! <br />
+                    Donating money helps us spend more time trying to create and perfect<br />
+                    our games and other content. We will keep you up to date on all of our<br />
+                    now content and events. So join us on our journey and become a legend today.
+                </p>
+    
+        <form id="userActionsForm">
+            <h2>Actions</h2>
+            <label>
+                Instagram Follow (5 points):
+                <input type="checkbox" id="followInstagram">
+            </label><br>
+    
+            <label>
+                Donate ($1 = 10 points):
+                <input type="number" id="donationAmount" min="0" step="1">
+            </label><br>
+    
+            <label>
+                Join Our Discord Server! (5 points):
+                <input type="checkbox" id="joinDiscord">
+            </label><br>
+    
+            <label>
+                Newsletter Sign-Up (5 points):
+                <input type="checkbox" id="signUpNewsletter">
+            </label><br>
+    
+            <button type="submit">Update Points</button>
+        </form>
+    
+        <h2>Scoreboard</h2>
+        <table id="scoreboard">
+            <tr>
+                <th>Name</th>
+                <th>Points</th>
+            </tr>
+        </table>
+    
+        <script src="/js/legends.js"></script>
+    </body>
+    
+    <!--ledgends -->
+    </html>
+    
+            
+        
