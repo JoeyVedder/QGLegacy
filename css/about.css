@@ -17,6 +17,7 @@ header h1 {
     font-size: 3rem;
     margin: 0;
     text-shadow: 0 0 5px #d95b5b, 0 0 10px #d95b5b;
+    animation: flicker 1.5s infinite alternate; /* Apply flicker animation */
 }
 
 nav ul {
@@ -56,13 +57,13 @@ main {
     color: #d95b5b;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    animation: flicker 1.5s infinite alternate; 
+    animation: flicker 1.5s infinite alternate;
 }
 
 .about-qgl h3 {
     font-size: 1.5rem;
     color: #d95b5b;
-    animation: flicker 1.5s infinite alternate; 
+    animation: flicker 1.5s infinite alternate;
 }
 
 .about-qgl p {
@@ -122,134 +123,41 @@ footer p {
 /* Flickering effect */
 @keyframes flicker {
     0% { 
-        opacity: 1; /* Full opacity */
+        opacity: 1;
     }
     10% { 
-        opacity: 0.3; /* Flicker down to 30% opacity */
+        opacity: 0.3;
     }
     20% { 
-        opacity: 1; /* Return to full opacity */
+        opacity: 1;
     }
     40% { 
-        opacity: 0.7; /* Flicker to 70% opacity */
+        opacity: 0.7;
     }
     60% { 
-        opacity: 1; /* Full opacity again */
+        opacity: 1;
     }
     80% { 
-        opacity: 0.5; /* Flicker to 50% opacity */
+        opacity: 0.5;
     }
     100% { 
-        opacity: 1; /* End with full opacity */
+        opacity: 1;
     }
 }
 
-/* Spider Web and Spider Styling Still working on this and its pissing me off */
-#spider-container {
-    position: relative;
-    display: inline-block;
-    font-size: 3rem;
-}
-
-#spider-web {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #d95b5b;
-    border-radius: 50%;
-    z-index: -1; 
-    transition: all 0.1s ease-in-out;
-}
-
-#spider {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #d95b5b;
-    border-radius: 50%;
-    top: -15px;
-    left: -10px;
-    animation: swing 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes swing {
-    0% { transform: rotate(5deg); }
-    100% { transform: rotate(-5deg); }
-}
-
-/* Positioning the spider web and spider as you scroll */
-#spider-container {
-    position: relative;
-}
-
-#spider-web {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#spider {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background-color: #d95b5b;
-    border-radius: 50%;
-}
-
-/* Fixed positioning for spider to follow scroll */
-#spider-container.fixed {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#spider-web.fixed {
-    position: fixed;
-    top: 50px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid #d95b5b;
-    border-radius: 50%;
-    z-index: 999;
-    transition: all 0.1s ease-in-out;
-}
-
-#spider.fixed {
-    position: fixed;
-    top: 65px; 
-    left: 50%;
-    transform: translateX(-50%);
+body {
+    cursor: url('https://example.com/creepy-cursor.png'), auto;
 }
 
 .flicker {
-    animation: flicker 1.5s infinite alternate; 
+    animation: flicker 1.5s infinite alternate;
 }
 
-/* Specific elements with synchronized flicker */
-
+/* Apply flicker effect to header title and other elements */
+header h1,
 .about-qgl h2, 
 .about-qgl h3 {
-    color: #d95b5b;
-    animation: flicker 1.5s infinite alternate; 
-}
-
-/* "Our Story" text flicker */
-.about-qgl h3 {
-    animation: flicker 1.5s infinite alternate; /* Flicker synced here */
+    animation: flicker 1.5s infinite alternate;
 }
 
 /* Media Queries for Mobile Optimization */
@@ -261,7 +169,6 @@ footer p {
         text-align: center;
     }
 
-    /* Adjust image size for smaller screens */
     section.qilot img, 
     section.ghost img {
         width: 100px;
