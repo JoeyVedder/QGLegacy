@@ -1,3 +1,4 @@
+// Need Instagram API and Stripe API to have this work properly, will keep the code so we dont forget whats supposed to happen lol 
 const points = {
     instagram: 5,
     twitter: 5,
@@ -7,20 +8,21 @@ const points = {
     newsletter: 5
 };
 
-let users = [];
+// Load existing users from localStorage
+let users = JSON.parse(localStorage.getItem("users")) || [];
 
 document.getElementById("userActionsForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let userName = prompt("Enter your name:");
+    if (!loggedInUser) {
+        alert("Please sign in to earn points.");
+        return;
+    }
 
     let totalPoints = 0;
 
     if (document.getElementById("followInstagram").checked) {
         totalPoints += points.instagram;
-    }
-    if (document.getElementById("followTwitter").checked) {
-        totalPoints += points.twitter;
     }
     if (document.getElementById("donationAmount").value > 0) {
         totalPoints += points.donation * document.getElementById("donationAmount").value;
@@ -28,25 +30,27 @@ document.getElementById("userActionsForm").addEventListener("submit", function(e
     if (document.getElementById("joinDiscord").checked) {
         totalPoints += points.discord;
     }
-    if (document.getElementById("shareWebsite").checked) {
-        totalPoints += points.share;
-    }
     if (document.getElementById("signUpNewsletter").checked) {
         totalPoints += points.newsletter;
     }
 
-    users.push({ name: userName, points: totalPoints });
+    // Find user and update their points
+    let user = users.find(u => u.name === loggedInUser);
+    if (user) {
+        user.points += totalPoints;
+    } else {
+        users.push({ name: loggedInUser, points: 5 + totalPoints }); // 5 points for signing up
+    }
 
     users.sort((a, b) => b.points - a.points);
-
-    users = users.slice(0, 5);
+    users = users.slice(0, 15); // Keep top 15 users
+    localStorage.setItem("users", JSON.stringify(users)); // Save to localStorage
 
     updateScoreboard();
 });
 
 function updateScoreboard() {
     let scoreboard = document.getElementById("scoreboard");
-
     scoreboard.innerHTML = "<tr><th>Name</th><th>Points</th></tr>";
 
     users.forEach(user => {
