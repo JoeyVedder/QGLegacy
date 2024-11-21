@@ -2,7 +2,7 @@
 /* */
 
 .navbar ul {list-style-type: none;
-    background-color: var(--background-color);
+    background-color: gray;
     padding: 0%;
     margin: 0%;
     overflow: hidden;

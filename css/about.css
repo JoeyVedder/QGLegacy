@@ -1,6 +1,4 @@
 /* give nav a glowing hover effect */
-/* make nav bar stick along with header */
-/* hannahs color: ff9900 marshalls color: #A19BE4  joeys color: #DBF5B9*/
 
 body {
     font-family: Arial, sans-serif;
@@ -36,10 +34,12 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth transition */
 }
 
 nav ul li a:hover {
-    color: #ff9900;
+    color: #00bcd4;
+    transform: translateY(-3px);
 }
 
 .active {
@@ -123,3 +123,13 @@ footer p {
     width: 80%; 
     max-width: 1200px; 
 }
+
+
+
+
+
+
+
+
+
+

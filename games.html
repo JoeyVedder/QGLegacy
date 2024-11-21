@@ -7,30 +7,77 @@
     <link rel="stylesheet" href="css/games.css">
 </head>
 <body class="main-layout">
-
-    <header class="header1">
-        <ol>
-            <li>
-                header
-            </li>
-        </ol>
+    <header>
+        <h1>Coming Soon!</h1>
+        <p>These are our upcoming games and games that are soon to come out!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="legends.html">Legends</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Parallax scrolling section -->
+    <section class="parallax">
+        <div class="parallax-text">Explore Our Games</div>
+    </section>
+
     <main class="content1">
-        <ol>
-            <li>
-                content
-            </li>
-        </ol>
+        <!-- Filters -->
+        <section class="filters">
+            <h2>Filter by Category</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" onclick="filterGames('Horror')">Horror</button>
+                <button class="filter-btn" onclick="filterGames('Survival')">Survival</button>
+                <button class="filter-btn" onclick="filterGames('RPG')">RPG</button>
+                <button class="filter-btn reset" onclick="resetFilters()">Reset</button>
+            </div>
+        </section>
+
+        <!-- Game Cards -->
+        <section class="games-tab">
+            <div class="game-card" data-category="Horror" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+                <div class="game-image">
+                    <img src="assets/images/horror.webp" alt="Horror Game">
+                    <div class="game-description">
+                        <p>Exciting Horror Game coming soon!</p>
+                        <p>Release Date: 2024</p>
+                        <p>Tags: Scary, Thrills, Dark</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="Survival" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+                <div class="game-image">
+                    <img src="assets/images/survival.webp" alt="Survival Game">
+                    <div class="game-description">
+                        <p>Survival Game - Test your skills!</p>
+                        <p>Release Date: 2025</p>
+                        <p>Tags: Adventure, Crafting, Strategy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="RPG" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
+                <div class="game-image">
+                    <img src="assets/images/RPG.webp" alt="RPG Game">
+                    <div class="game-description">
+                        <p>RPG Game - Embark on an epic journey!</p>
+                        <p>Release Date: 2026</p>
+                        <p>Tags: Fantasy, Adventure, Combat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <ol>
-            <li>
-                footer
-            </li>
-        </ol>
+        <p>&copy; 2024 QGLegacy. All rights reserved.</p>
     </footer>
 
+    <script src="js/games.js"></script>
 </body>
 </html>
