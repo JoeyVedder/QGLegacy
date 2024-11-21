@@ -33,6 +33,7 @@
                 <button class="filter-btn" onclick="filterGames('Horror')">Horror</button>
                 <button class="filter-btn" onclick="filterGames('Survival')">Survival</button>
                 <button class="filter-btn" onclick="filterGames('RPG')">RPG</button>
+                <button class="filter-btn" onclick="filterGames('Mobilegames')">Mobile Games</button>
                 <button class="filter-btn reset" onclick="resetFilters()">Reset</button>
             </div>
         </section>
@@ -41,8 +42,9 @@
         <section class="games-tab">
             <div class="game-card" data-category="Horror" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
                 <div class="game-image">
-                    <img src="assets/images/horror.webp" alt="Horror Game">
+                    <img src="assets/game.images/horror.webp" alt="Horror Game called Paranoia">
                     <div class="game-description">
+                        <p>Dark Paranoia:</p>
                         <p>Exciting Horror Game coming soon!</p>
                         <p>Release Date: 2024</p>
                         <p>Tags: Scary, Thrills, Dark</p>
@@ -52,7 +54,7 @@
 
             <div class="game-card" data-category="Survival" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
                 <div class="game-image">
-                    <img src="assets/images/survival.webp" alt="Survival Game">
+                    <img src="assets/game.images/survival.webp" alt="Survival Game">
                     <div class="game-description">
                         <p>Survival Game - Test your skills!</p>
                         <p>Release Date: 2025</p>
@@ -63,12 +65,23 @@
 
             <div class="game-card" data-category="RPG" onmouseover="flipCard(this)" onmouseout="unflipCard(this)">
                 <div class="game-image">
-                    <img src="assets/images/RPG.webp" alt="RPG Game">
+                    <img src="assets/game.images/RPG.webp" alt="RPG Game">
                     <div class="game-description">
                         <p>RPG Game - Embark on an epic journey!</p>
                         <p>Release Date: 2026</p>
                         <p>Tags: Fantasy, Adventure, Combat</p>
                     </div>
+                </div>
+            </div>
+            <div class="game-card" data-category="Mobilegames" onmouseover="flipCard(this)" onmouseout="unflipcard(this)">
+                <div class="game-image">
+                    <img src="assets/game.images/ethereal.webp" alt="Mobile game called Ethereal Shadow">
+                    <dv class="game-description">
+                        <p>Ethereal Shadow:</p>
+                        <p>Outsmart enemies in a Woodland Arena!</p>
+                        <p>Release Date: 2027</p>
+                        <p>Tags: Fantasy, Battle Royale, Strategy</p>
+                    </dv>
                 </div>
             </div>
         </section>

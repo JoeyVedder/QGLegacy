@@ -100,6 +100,11 @@ nav ul li a:hover {
     background-color: #00bcd4;
 }
 
+.filter-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
 .reset {
     background-color: #f44336; /* Red color for Reset */
 }
