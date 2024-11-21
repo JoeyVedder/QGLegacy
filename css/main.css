@@ -1,8 +1,3 @@
-:root {
-    --header-color: red;
-    --font-color: purple;
-    --font-family: 'Arial, sans-serif';
-}
 
 .navbar ul {list-style-type: none;
     background-color: black;

@@ -8,54 +8,27 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="games.html">Games</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="legends.html">Legends</a></li>
         </ul>
+        <div class="auth-buttons">
+            <button id="signInBtn">Sign In</button>
+            <button id="signUpBtn">Sign Up</button>
+        </div>
     </nav>
     
-    <div class="auth-container">
-        <button id="signInBtn">Sign In</button>
-        <button id="signUpBtn">Sign Up</button>
-    </div>
-
-    <h2>The bigger picture
-        <p>we are trying to be the next upcoming gaming studio. 
-            <br /> Our goal is to create new games and unique concepts that you have never seen before.
-            <br /> If you are interested in helping us get going you can follow us on our social media below!
-            <br /> For those of you with lots of money and nothing to to with it, follow the link to donate! <a href="legends.html">Legends</a>
+    <main>
+        <h2 class="headline">The Bigger Picture</h2>
+        <p class="intro-text">
+            We are trying to be the next upcoming gaming studio. 
+            <br> Our goal is to create new games and unique concepts that you have never seen before.
+            <br> If you are interested in helping us get going, you can follow us on our social media below!
+            <br> For those of you with lots of money and nothing to do with it, follow the link to donate! <a href="legends.html">Legends</a>
         </p>
-    </h2>
-
-    <div id="signInModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Sign In</h3>
-            <form id="signInForm">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="signUpModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Sign Up</h3>
-            <form id="signUpForm">
-                <label for="newEmail">Email:</label>
-                <input type="email" id="newEmail" name="newEmail" required>
-                <label for="newPassword">Password:</label>
-                <input type="password" id="newPassword" name="newPassword" required>
-                <button type="submit">Sign Up</button> 
-            </form>
-        </div>
-    </div>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
