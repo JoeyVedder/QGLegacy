@@ -1,5 +1,21 @@
 /*grayscale for background colors */
 /* */
+.header {
+    display: flex;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+    border: 3px solid blue;
+
+}
+
+.logo img {
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+}
+
 
 .navbar ul {list-style-type: none;
     background-color: var(--background-color);
@@ -14,6 +30,8 @@
     padding: 15px;
     display: block;
     text-align: center;
+
+    border: 3px solid orange;
 }
 
 .navbar a:hover {background-color: rgb(43, 29, 29);
