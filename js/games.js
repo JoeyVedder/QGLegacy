@@ -24,7 +24,7 @@ function filterGames(category) {
         }
     });
 
-    updateFilterButtonStates(); // Update button appearance
+    updateFilterButtonStates(); 
 }
 
 // Reset all filters

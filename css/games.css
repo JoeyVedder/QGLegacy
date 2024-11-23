@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -7,29 +8,29 @@ body {
     box-sizing: border-box;
 }
 
+/* Header */
 header {
     background-color: #1a1a1a;
     color: #ff9900;
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 20px;
     border-bottom: 2px solid #ff9900;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.4rem;
+    margin: 0 auto 20px;
+    max-width: 900px;
     line-height: 1.6;
 }
 
+/* Navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -38,13 +39,13 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 nav ul li a {
     color: #ff9900;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -54,15 +55,14 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-/* Parallax Effect */
+/* Parallax Section */
 .parallax {
-    background-image: url('assets/images/parallax-bg.jpg');
-    background-attachment: fixed;
+    background-image: url('assets/images/parallax-bg.webp');
     background-size: cover;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-position: center center;
+    background-color: #1a1a1a;
+    height: 70px; /* Adjusted for a better visual presence */
+    width: 100%;
 }
 
 .parallax-text {
@@ -70,6 +70,7 @@ nav ul li a:hover {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     text-align: center;
+    padding: 12px 0; /* Positioned in the center */
 }
 
 /* Filters Section */
@@ -81,19 +82,19 @@ nav ul li a:hover {
 .filter-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 20px;
 }
 
 .filter-btn {
     background-color: #ff9900;
     color: #fff;
-    padding: 12px 25px;
+    padding: 15px 30px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 5px;
 }
 
 .filter-btn:hover {
@@ -121,38 +122,39 @@ nav ul li a:hover {
     color: #f1f1f1;
 }
 
+/* Game Cards */
 .games-tab {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
 .game-card {
-    width: 250px;
-    height: 350px;
-    perspective: 1000px;
+    width: 270px;
+    height: 380px;
     position: relative;
-    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease;
+    perspective: 1000px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    margin: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease;
 }
 
 .game-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.6); 
+    box-shadow: 0 0 25px 8px rgba(0, 255, 255, 0.7);
 }
 
 .game-image {
     width: 100%;
     height: 100%;
     position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transform-style: preserve-3d;
     transition: transform 0.6s;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .game-card:hover .game-image {
@@ -172,19 +174,19 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0;
     padding: 20px;
     border-radius: 12px;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
     transform: rotateY(180deg);
     text-align: center;
     overflow-y: auto;
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .game-card:hover .game-description {
@@ -192,7 +194,7 @@ nav ul li a:hover {
 }
 
 .game-description p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 10px;
     text-align: left;
