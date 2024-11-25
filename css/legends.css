@@ -89,6 +89,28 @@ nav ul li a.active, nav ul li a:hover {
     color: #ff9900;
 }
 
+.leaderboard-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+#leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#leaderboard th, #leaderboard td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#leaderboard th {
+    background-color: #333;
+    color: #fff;
+}
+
 footer {
     background-color: #1a1a1a;
     color: #cccccc;
